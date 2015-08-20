@@ -10,11 +10,11 @@ class Preferences {
     
     private $props = array();
     
-    private static $instance;                       // статическое свойство
+    private static $instance;                       // static property
     
-    private function __construct()   {}             // закрытый конструктор. теперь нельзя создать экземпляр класса из вне
+    private function __construct()   {}             // closed constructor. can not create an instance of the class because it's private
         
-    public static function getInstance()            // статический метод
+    public static function getInstance()            // static method
     {
       if ( empty ( self::$instance ) ) {
           self::$instance = new Preferences();
