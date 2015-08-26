@@ -25,7 +25,7 @@ abstract class CommsManager {
 class BloggsCommsManager extends CommsManager {
     
     function getHeaderText(){
-        return "BloggsCal верхний колонтитул\n";
+        return "BloggsCal верхний колонтитул \n";
     }
 
     function getApptEncoder(){
