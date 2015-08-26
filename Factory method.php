@@ -16,7 +16,13 @@ class BloggsApptEncoder extends ApptEncoder {
     }
 }
 
-abstract BloggsCommsManager extends CommsManager{
+abstract class CommsManager {
+    abstract function getHeaderText();
+    abstract function getApptEncoder();
+    abstract function getFooterText();
+}
+
+class BloggsCommsManager extends CommsManager {
     
     function getHeaderText(){
         return "BloggsCal верхний колонтитул\n";
@@ -31,3 +37,8 @@ abstract BloggsCommsManager extends CommsManager{
     }
 
 }
+
+$s = new BloggsCommsManager();
+//echo $s->getApptEncoder()
+
+echo $s->getApptEncoder()->encode();
