@@ -9,7 +9,11 @@
 class UnitException extends Exception {}
 
 abstract class Unit {
-        
+
+    function getComposite(){
+        return null;
+    }
+    
     function addUnit( Unit $unit ){
         throw new UnitExeption ( get_class ( $this ) ."относиться к листьям" );
     }
@@ -55,12 +59,58 @@ class Army extends Unit {
     }
 }
 
+class TroopCarrier extends CompositeUnit{
+    
+    function addUnit( Unit $unit ){
+        if ( $unit instanceof Cavalry ){
+            throw new UnitException( " Нельзя помещать лошадь на бронетранспортер " );
+        }
+        super::addUnit( $unit );
+    }
+    
+    function bombardStrength(){
+        return 0;
+    }
+    
+}
+
 class Archer extends Unit{
     function bombardStrength(){return 4;}
 }
 
 class LaserCannonUnit extends Unit{
     function bombardStrength(){return 44;}
+}
+
+abstract class CompositeUnit extends Unit{
+    
+    private $units = array();
+    
+    function getComposite(){
+        return $this;
+    }
+    
+    protected function units(){
+        return $this->units;
+    }
+    
+    function removeUnit ( Unit $unit ){
+        $units = array();
+        foreach ( $this->units as $thisunit ){
+            if ( $unit !== $thisunit ) {
+                $units[] = $thisunit;
+            }
+        }
+        $this->units = $units;
+    }
+    
+    function addUnit( Unit $unit ){
+        if ( in_array( $unit, $this->units, true )){
+            return;
+        }
+        $this->units[] = $unit;
+    }
+    
 }
 
 $main_army = new Army();
