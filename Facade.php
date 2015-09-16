@@ -57,5 +57,5 @@ class ProductFacade {
     
 }
 
-$facade = new ProductFacede ( 'test.txt' );
+$facade = new ProductFacade ( 'test.txt' );
 $facade->getProduct( 234 );
