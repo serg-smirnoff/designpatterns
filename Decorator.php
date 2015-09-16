@@ -6,11 +6,6 @@
  * and open the template in the editor.
  */
 
-/**
- * Description of Decorator
- *
- * @author Sammy Guergachi <sguergachi at gmail.com>
- */
 class Decorator {
     //put your code here
 }

@@ -6,12 +6,6 @@
  * and open the template in the editor.
  */
 
-/**
- * Description of Facade
- *
- * @author Sammy Guergachi <sguergachi at gmail.com>
- */
-
 class Product{
     
     public $id;
@@ -33,20 +27,20 @@ class ProductFacade {
         $this->compile();
     }
 
-    function getProductFileLines( $file ){
+    public function getProductFileLines( $file ){
         return file ( $file );
     }
     
-    function getProductObjectFromID( $id, $productname ){
+    public function getProductObjectFromID( $id, $productname ){
         return new Product ( $id, $productname );
     }
 
-    function getNameFromLine( $line ){
-        return '';
+    public function getNameFromLine( $line ){
+        return 'test';
     }
 
-    function getIDFromLine( $line ){
-        return '-1';
+    public function getIDFromLine( $line ){
+        return '1';
     }
     
     private function compile(){
