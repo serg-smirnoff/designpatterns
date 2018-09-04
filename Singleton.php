@@ -33,7 +33,7 @@ class Preferences {
 }
 
 $pref = Preferences::getInstance();
-$pref->setProperty( "name", "é×ÁÎ" );
+$pref->setProperty( "name", "Ð˜Ð²Ð°Ð½" );
 unset ($pref);
 
 $pref2 = Preferences::getInstance();

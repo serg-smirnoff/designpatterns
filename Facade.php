@@ -45,12 +45,12 @@ class ProductFacade {
     
     private function compile(){
         
-        $lines = getProductFileLines ($this->file);
+        $lines = getProductFileLines ( $this->file );
         
         foreach ( $lines as $line ) {
-          $id = getIDFromLine ( $line );
-          $name = getNameFromLine ( $line );
-          $this->products[$id] = geetProductObjectsFromID ( $id, $name );
+          $id = $this->getIDFromLine ( $line );
+          $name = $this->getNameFromLine ( $line );
+          $this->products[$id] = $this->geetProductObjectsFromID ( $id, $name );
         }
         
     }
@@ -58,4 +58,5 @@ class ProductFacade {
 }
 
 $facade = new ProductFacade ( 'test.txt' );
+var_dump($facade);
 $facade->getProduct( 234 );

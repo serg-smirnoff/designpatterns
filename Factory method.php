@@ -12,7 +12,7 @@ abstract class ApptEncoder {
 
 class BloggsApptEncoder extends ApptEncoder {
     function encode(){
-        return "Данные о встрече закодированы в формате BloggsCal \n";
+        return "п■п╟п╫п╫я▀п╣ п╬ п╡я│я┌я─п╣я┤п╣ п╥п╟п╨п╬п╢п╦я─п╬п╡п╟п╫я▀ п╡ я└п╬я─п╪п╟я┌п╣ BloggsCal \n";
     }
 }
 
@@ -25,7 +25,7 @@ abstract class CommsManager {
 class BloggsCommsManager extends CommsManager {
     
     function getHeaderText(){
-        return "BloggsCal верхний колонтитул \n";
+        return "BloggsCal п╡п╣я─я┘п╫п╦п╧ п╨п╬п╩п╬п╫я┌п╦я┌я┐п╩ \n";
     }
 
     function getApptEncoder(){
@@ -33,7 +33,7 @@ class BloggsCommsManager extends CommsManager {
     }
     
     function getFooterText(){
-        return "BloggsCal нижний колонтитул\n";
+        return "BloggsCal п╫п╦п╤п╫п╦п╧ п╨п╬п╩п╬п╫я┌п╦я┌я┐п╩\n";
     }
 
 }

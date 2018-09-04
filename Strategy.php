@@ -49,7 +49,7 @@ class TimedCostStrategy extends CostStrategy{
     }
     
     function chargeType(){
-        return "ðÏÞÁÓÏ×ÁÑ ÏÐÌÁÔÁ";
+        return "ÐŸÐ¾Ñ‡Ð°ÑÐ¾Ð²Ð°Ñ Ð¾Ð¿Ð»Ð°Ñ‚Ð°";
     }
     
 }    
@@ -61,7 +61,7 @@ class FixedCostStrategy extends CostStrategy{
     }
     
     function chargeType(){
-        return "æÉËÓÉÒÏ×ÁÎÎÁÑ ÏÐÌÁÔÁ";
+        return "Ð¤Ð¸ÐºÑÐ¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð°Ñ Ð¾Ð¿Ð»Ð°Ñ‚Ð°";
     }
     
 } 
@@ -70,6 +70,6 @@ $lessons[] = new Seminar ( 4, new TimedCostStrategy() );
 $lessons[] = new Lecture ( 4, new FixedCostStrategy() );
 
 foreach ( $lessons as $lesson ){
-    print "ïÐÌÁÔÁ ÚÁ ÚÁÎÑÔÉÅ {$lesson->cost()}\n\n";
-    print "ôÉÐ ÏÐÌÁÔÙ {$lesson->chargeType()}\n\n";
+    print "ÐžÐ¿Ð»Ð°Ñ‚Ð° Ð·Ð° Ð·Ð°Ð½ÑÑ‚Ð¸Ðµ {$lesson->cost()}\n\n";
+    print "Ð¢Ð¸Ð¿ Ð¾Ð¿Ð»Ð°Ñ‚Ñ‹ {$lesson->chargeType()}\n\n";
 }

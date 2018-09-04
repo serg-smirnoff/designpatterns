@@ -15,11 +15,11 @@ abstract class Unit {
     }
     
     function addUnit( Unit $unit ){
-        throw new UnitExeption ( get_class ( $this ) ."относиться к листьям" );
+        throw new UnitExeption ( get_class ( $this ) ."п╬я┌п╫п╬я│п╦я┌я▄я│я▐ п╨ п╩п╦я│я┌я▄я▐п╪" );
     }
     
     function removeUnit( Unit $unit ){
-        throw new UnitExeption ( get_class ( $this ) ."относиться к листьям" );
+        throw new UnitExeption ( get_class ( $this ) ."п╬я┌п╫п╬я│п╦я┌я▄я│я▐ п╨ п╩п╦я│я┌я▄я▐п╪" );
     }
     
     abstract function bombardStrength();
@@ -63,7 +63,7 @@ class TroopCarrier extends CompositeUnit{
     
     function addUnit( Unit $unit ){
         if ( $unit instanceof Cavalry ){
-            throw new UnitException( " Нельзя помещать лошадь на бронетранспортер " );
+            throw new UnitException( " п²п╣п╩я▄п╥я▐ п©п╬п╪п╣я┴п╟я┌я▄ п╩п╬я┬п╟п╢я▄ п╫п╟ п╠я─п╬п╫п╣я┌я─п╟п╫я│п©п╬я─я┌п╣я─ " );
         }
         super::addUnit( $unit );
     }
