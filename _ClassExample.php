@@ -14,8 +14,7 @@ class Test{
 		return $this->publicProperty + $this->privateProperty;
 	}
 	
-	public function __destruct(){
-		
+	public function __destruct(){		
 	}
 	
 }

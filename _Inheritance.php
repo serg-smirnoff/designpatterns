@@ -28,4 +28,5 @@ $foo->printPHP();       // Выведет: 'PHP просто супер'
 $bar->printItem('baz'); // Выведет: 'Bar: baz'
 $bar->printPHP();       // Выведет: 'PHP просто супер'
 
+
 ?>

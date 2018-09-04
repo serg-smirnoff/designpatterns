@@ -126,4 +126,5 @@ foreach ($publications as $publication) {
     }
 }
 
+
 ?>
