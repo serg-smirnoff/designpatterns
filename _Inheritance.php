@@ -6,7 +6,7 @@ class Foo
     {
         echo 'Foo: ' . $string . PHP_EOL;
     }
-    
+
     public function printPHP()
     {
         echo 'PHP просто супер.' . PHP_EOL;

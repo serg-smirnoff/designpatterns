@@ -1,0 +1,31 @@
+<?php
+
+class CommsManager {
+   const  BLOGGS = 1;
+   const    MEGA = 2;
+   private $mode = 1;
+
+   function __construct( $mode ) {
+      $this->mode = $mode;
+   }
+
+   function getHeaderText() {
+      switch ( $this->mode ) {
+         case ( self::MEGA ):
+            return "MegaCal верхний колонтитул\n";
+         default:
+            return "BloggsCal верхний колонтитул \n";
+      }
+   }
+
+   function getApptEncoder() {
+      switch ( $this->mode ) {
+         case ( self::MEGA ):
+            return new MegaApptEncoder();
+         default:
+            return new BloggsApptEncoder();
+      }
+   }
+}
+
+?>

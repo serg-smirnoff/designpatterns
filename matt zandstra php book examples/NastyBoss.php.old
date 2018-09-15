@@ -1,0 +1,18 @@
+<?php
+class NastyBoss {
+   private $employees = array();
+
+   function addEmployee( $employeeName ) {
+      $this->employees[] = new Minion( $employeeName );
+   }
+
+   function projectFails() {
+      if ( count( $this->employees ) > 0 ) {
+         $emp = array_pop( $this->employees );
+         $emp->fire();
+      }
+   }
+}
+
+
+?>

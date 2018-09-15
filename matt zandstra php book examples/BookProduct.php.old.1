@@ -1,0 +1,14 @@
+<?php
+class BookProduct extends ShopProduct {
+   function getNumberOfPages() {
+      return $this->numPages;
+   }
+
+   function getSummaryLine() {
+      $base  = "{$this->title} ( {$this->producerMainName}, ";
+      $base .= "{$this->producerFirstName} )";
+      $base .= ": {$this->numPages} стр.";
+      return $base;
+   }
+}
+?>

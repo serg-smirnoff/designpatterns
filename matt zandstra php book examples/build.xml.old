@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!-- build xml -->
+
+<project name="megaquiz"
+         default="main"
+         description="Движок проекта">
+
+   <target name="runfirst"
+         description="Первая цель" />
+
+   <target name="runsecond"
+         depends="runfirst"
+         description="Вторая цель" />
+
+   <target name="main"
+         depends="runsecond"
+         description="Основная цель" />
+</project>

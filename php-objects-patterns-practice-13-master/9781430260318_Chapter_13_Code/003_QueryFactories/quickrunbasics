@@ -1,0 +1,5 @@
+php runner.php cmd=AddVenue venue_name="venue A"
+php runner.php cmd=AddSpace venue_id=1 space_name="Space A"
+php runner.php cmd=AddVenue venue_name="venue B"
+php runner.php cmd=AddSpace venue_id=2 space_name="Space B"
+php runner.php cmd=ListVenues

@@ -1,0 +1,20 @@
+This NOT A WORKING APPLICATION -- it is provided to illustrate examples in 
+PHP Objects Patterns and Practice.
+
+The SQLite database and cached config files will be automatically placed under ./data
+by default
+
+# removes cache and db files
+./quickteardownscript
+
+# generates the database and tables
+./quicksetupscript
+
+# calls runner.php which is a very basic command line version of the app under woo/
+# this creates a couple of venues and spaces
+# note how the Request object automatically adapts to being run in a CLI context
+./quickrunbasics
+
+This code will likely fail at less than PHP 5.5 -- this is probably due only to code
+that uses ::class to normalise class names. If you replace these lines with fully qualified
+class names (eg: woo/domain/Venue) the code will likely run with PHP 5.3 or better

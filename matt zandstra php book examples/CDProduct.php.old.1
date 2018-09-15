@@ -1,0 +1,14 @@
+<?php
+class CDProduct extends ShopProduct {
+   function getPlayLength() {
+      return $this->playLength;
+   }
+
+   function getSummaryLine() {
+      $base  = "{$this->title} ( {$this->producerMainName}, ";
+      $base .= "{$this->producerFirstName} )";
+      $base .= ": Время звучания - {$this->playLength}";
+      return $base;
+   }
+}
+?>

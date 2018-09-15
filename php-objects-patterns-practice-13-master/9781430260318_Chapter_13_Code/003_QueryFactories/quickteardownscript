@@ -1,0 +1,5 @@
+# clear down
+rm -f data/cmap
+rm -f data/dsn
+rm -f woo.db
+

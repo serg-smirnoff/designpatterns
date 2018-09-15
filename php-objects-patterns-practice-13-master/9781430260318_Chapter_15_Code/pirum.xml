@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server>
+  <name>pear.localhost</name>
+  <summary>getinstance PEAR channel</summary>
+  <alias>getinstance</alias>
+  <url>http://pear.localhost/</url>
+</server>
